@@ -24,7 +24,8 @@ const router=createBrowserRouter([
       element:<Home/>
       },{
         path:'books/:bookId',
-        element:<BookDetail/>
+        element:<BookDetail/>,
+        loader:()=>fetch('https://raw.githubusercontent.com/ProgrammingHero1/boi-poka-book-vibe/refs/heads/main/public/booksData.json')
       },{
         path:'dashboard',
         element:<Dashboard/>
